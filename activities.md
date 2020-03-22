@@ -161,7 +161,7 @@ For full information and tutorial please refer [PublishActivity in V3](https://f
 |                                                              |                                                          | {baseUrl}activities/:id/aliases/:aliasId<br />Refer-Example: DeleteActivity-Alias |
 |                                                              |                                                          | {baseUrl}activities/:id/versions/:version<br />Refer-Example:DeleteActivity-Version |
 
-Example: UpdateActivity
+**Example: UpdateActivity**
 
 [Create an alias to the Activity](https://forge.autodesk.com/en/docs/design-automation/v3/tutorials/autocad/task-4-publish-activity/#step-2-create-an-alias-to-the-activity)
 
@@ -220,7 +220,7 @@ curl -X POST \
    }'
 ```
 
-Example : Patch Activity
+**Example : Patch Activity**
 
 Modifies alias details.
 
@@ -234,7 +234,7 @@ curl -v 'https://developer.api.autodesk.com/da/us-east/v3/activities/:id/aliases
       }'
 ```
 
-Example: Delete Activity
+**Example: Delete Activity**
 
 Deletes the specified Activity, including all versions and aliases.
 
@@ -250,7 +250,7 @@ curl -v 'https://developer.api.autodesk.com/da/us-east/v3/activities/:id/aliases
   -H 'Authorization: Bearer AuIPTf4KYLTYGVnOHQ0cuolwCW2a'
 ```
 
-Example: DeleteActivity-Alias
+**Example: DeleteActivity-Alias**
 
 Deletes the alias.
 
@@ -260,7 +260,7 @@ curl -v 'https://developer.api.autodesk.com/da/us-east/v3/activities/:id/aliases
   -H 'Authorization: Bearer AuIPTf4KYLTYGVnOHQ0cuolwCW2a'
 ```
 
-Example: DeleteActivity-Version
+**Example: DeleteActivity-Version**
 
 Deletes the specified version of the Activity.
 
