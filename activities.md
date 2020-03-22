@@ -18,7 +18,7 @@ For example, using AutoCAD to plot a supplied DWG to a PDF file. Another example
 | **Authorization** | Must be `Bearer <token> `, where `token` is obtained via [OAuth](https://forge.autodesk.com/en/docs/oauth/v2/reference/http/authenticate-POST) | No Change |
 | **Content-Type**  | Must be `application/json`                                   | No Change |
 
-
+#### Body
 
 | API             | V2                                                           |       | V3                                                           |
 | --------------- | ------------------------------------------------------------ | ----- | ------------------------------------------------------------ |
@@ -44,6 +44,76 @@ For example, using AutoCAD to plot a supplied DWG to a PDF file. Another example
 | 8               | Version                                                      | 8     | {baseUrl}/v3/activities/{id}/versions -[Assign an existing alias to the updated Activit](https://forge.autodesk.com/en/docs/design-automation/v3/tutorials/autocad/task-4-publish-activity/#step-4-assign-an-existing-alias-to-the-updated-activity) |
 | 9               | Description                                                  | 9     | description -`string`, description of the activity           |
 | 10              | IsPublic                                                     | 10    | n\a                                                          |
-|                 |                                                              |       |                                                              |
-|                 |                                                              |       |                                                              |
 
+
+
+Example:
+
+V2																		
+```
+curl -v 'https://developer.api.autodesk.com/autocad.io/us-east/v2/Activities'\
+  -X 'POST' \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer YOUR_ACCESS_TOKEN' \
+  -d ' \
+    {
+      "HostApplication": "",
+      "RequiredEngineVersion": "22.0",
+      "Parameters": {
+        "InputParameters": [{
+          "Name": "HostDwg",
+          "LocalFileName": "$(HostDwg)"
+        }],
+        "OutputParameters": [{
+          "Name": "Result",
+          "LocalFileName": "layers.txt"
+        }]
+      },
+      "Instruction": {
+        "CommandLineParameters": null,
+        "Script": "(command \"LISTLAYERS\")\n"
+      },
+      "AppPackages":["ListLayers"],
+      "Version": 1,
+      "Id": "ListLayersActivity",
+      "Description": "Extracts layer names from an input drawing file and saves them to a text file"
+    }'
+```
+V3
+```
+curl -X POST \
+  https://developer.api.autodesk.com/da/us-east/v3/activities \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer YOUR_ACCESS_TOKEN' \
+  -d '{
+        "id": "ListLayersActivity",
+        "commandLine": [
+            "$(engine.path)\\accoreconsole.exe /i $(args[InputDwg].path) /al $(appbundles[ListLayers].path) /s $(settings[script].path)"
+        ],
+        "parameters": {
+          "InputDwg": {
+            "zip": false,
+            "ondemand": false,
+            "verb": "get",
+            "description": "Input drawing file",
+            "localName": "InputDrawing.dwg"
+          },
+          "result": {
+            "zip": false,
+            "ondemand": false,
+            "verb": "put",
+            "description": "Results",
+            "required": true,
+            "localName": "layers.txt"
+          }
+        },
+        "engine": "Autodesk.AutoCAD+22",
+        "appbundles": [
+            "YOUR_APP_NICKNAME.ListLayers+my_working_version"
+        ],
+        "settings": {
+            "script": "(command \"LISTLAYERS\")\n"
+        },
+        "description": "Extracts layer names from an input drawing file and saves them to a text file"
+    }'
+```
