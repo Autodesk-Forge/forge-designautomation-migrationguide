@@ -11,16 +11,16 @@ For example, using AutoCAD to plot a supplied DWG to a PDF file. Another example
 | Activity | Base URL    | https://developer.api.autodesk.com/autocad.io/us-east/v2 | https://developer.api.autodesk.com/da/us-east/v3             |
 |          |             |                                                          | No of Activities that can be created -1, limit varies by Engine. |
 
-#### Headers
+### Headers
 
 |                   | v2                                                           | v3        |
 | ----------------- | ------------------------------------------------------------ | --------- |
 | **Authorization** | Must be `Bearer <token> `, where `token` is obtained via [OAuth](https://forge.autodesk.com/en/docs/oauth/v2/reference/http/authenticate-POST) | No Change |
 | **Content-Type**  | Must be `application/json`                                   | No Change |
 
-#### Body
+### Body
 
-| API             | V2                                                           |          | V3                                                           |
+|                 | V2                                                           |          | V3                                                           |
 | --------------- | ------------------------------------------------------------ | -------- | ------------------------------------------------------------ |
 | URL             | https://developer.api.autodesk.com/autocad.io/us-east/v2/Activities |          | https://developer.api.autodesk.com/da/us-east/v3/activities  |
 | Body Attributes |                                                              |          |                                                              |
@@ -54,7 +54,7 @@ For example, using AutoCAD to plot a supplied DWG to a PDF file. Another example
 |                 |                                                              | 11.2.2.1 | verb -`enum:string`, The HTTP verb to be used. Possible values: `get`, `head`, `put`, `post`, `patch`, `read` |
 |                 |                                                              | 11.2.2.2 | multiparts -`object` Provide [multipart post](http://hc.apache.org/httpclient-3.x/methods/multipartpost.html) method to upload the results and multiparts can be empty if there is no “parameter” to provide. Refer [multiparts](https://forge.autodesk.com/en/docs/design-automation/v3/reference/http/activities-POST/) |
 
-##### New API in V3
+#### New API in V3
 
 Base URL: https://developer.api.autodesk.com/da/us-east/v3
 
@@ -64,9 +64,9 @@ Base URL: https://developer.api.autodesk.com/da/us-east/v3
 | **POST**  | {baseUrl}/activities/{id}/versions          | Creates a new version of the Activity |
 | **PATCH** | {baseUrl}/activities/{id}/aliases/{aliasId} | Modifies alias details.               |
 
-##### Example:
+#### Example:
 
-### V2																		
+#### V2																		
 
 ```
 curl -v 'https://developer.api.autodesk.com/autocad.io/us-east/v2/Activities'\
@@ -97,7 +97,7 @@ curl -v 'https://developer.api.autodesk.com/autocad.io/us-east/v2/Activities'\
       "Description": "Extracts layer names from an input drawing file and saves them to a text file"
     }'
 ```
-### V3
+#### V3
 
 ```
 curl -X POST \
@@ -139,7 +139,7 @@ curl -X POST \
 
 For full information and tutorial please refer [PublishActivity in V3](https://forge.autodesk.com/en/docs/design-automation/v3/tutorials/autocad/task-4-publish-activity/)
 
-#### GET Activities
+### GET Activities
 
 |                      | v2                                                        | v3                                                           |
 | -------------------- | --------------------------------------------------------- | ------------------------------------------------------------ |
@@ -150,7 +150,7 @@ For full information and tutorial please refer [PublishActivity in V3](https://f
 |                      |                                                           | {baseUrl}/activities/:id/versions/:version<br />`Gets the details of the specified version of the Activity.` |
 |                      |                                                           | {baseUrl}activities/:id/aliases<br />`Lists all aliases for the specified Activity.` |
 
-#### Put ,Patch, Delete Activities
+### Put ,Patch, Delete Activities
 
 |                                                              | v2                                                       | v3                                                           |
 | ------------------------------------------------------------ | -------------------------------------------------------- | ------------------------------------------------------------ |
