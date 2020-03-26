@@ -7,9 +7,9 @@
 | API Spec | Description | V2                                                       | V3                                                           |
 | :------- | ----------- | -------------------------------------------------------- | ------------------------------------------------------------ |
 | WorkItem | Base URL    | https://developer.api.autodesk.com/autocad.io/us-east/v2 | https://developer.api.autodesk.com/da/us-east/v3             |
-|          |             |                                                          | No of Activities that can be created -1, limit varies by Engine. |
+|          |             |                                                          | The new WorkItem is always placed on a queue and later picked up by an engine.<br />Per-engine. These limits are enforced when the engine processes the workitem.<br />- Number of downloads (LimitDownloads)<br/>- Number of uploads (LimitUploads)<br/>- Total download size (LimitDownloadSize)<br/>- Total upload size (LimitUploadSize)<br/>- Processing time (LimitProcessingTime)<br/>- Total size of uncompressed bits for all referenced appbundles (LimitTotalUncompressedAppsSizePerActivity). |
 
-### Headers
+### |Headers
 
 |                   | v2                                                           | v3        |
 | ----------------- | ------------------------------------------------------------ | --------- |
