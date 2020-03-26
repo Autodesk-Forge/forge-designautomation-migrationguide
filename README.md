@@ -16,14 +16,16 @@ Index: :card_index:
   New  API Groups In V3 :new:
 
 - Forge Apps
-  [GET forgeapps/:id](https://forge.autodesk.com/en/docs/design-automation/v3/reference/http/forgeapps-id-GET/)
-  [DELETE forgeapps/:id](https://forge.autodesk.com/en/docs/design-automation/v3/reference/http/forgeapps-id-DELETE/)
-  [PATCH forgeapps/:id](https://forge.autodesk.com/en/docs/design-automation/v3/reference/http/forgeapps-id-PATCH/)
+  - [GET forgeapps/:id](https://forge.autodesk.com/en/docs/design-automation/v3/reference/http/forgeapps-id-GET/)
+  - [DELETE forgeapps/:id](https://forge.autodesk.com/en/docs/design-automation/v3/reference/http/forgeapps-id-DELETE/)
+  - [PATCH forgeapps/:id](https://forge.autodesk.com/en/docs/design-automation/v3/reference/http/forgeapps-id-PATCH/)
 - Health 
-  [GET health/:engine](https://forge.autodesk.com/en/docs/design-automation/v3/reference/http/health-engine-GET/)
+  
+  - [GET health/:engine](https://forge.autodesk.com/en/docs/design-automation/v3/reference/http/health-engine-GET/)
 - ServiceLimits
-  [GET servicelimits/:owner](https://forge.autodesk.com/en/docs/design-automation/v3/reference/http/servicelimits-owner-GET/)
-  [PUT servicelimits/:owner](https://forge.autodesk.com/en/docs/design-automation/v3/reference/http/servicelimits-owner-PUT/)
+  - [GET servicelimits/:owner](https://forge.autodesk.com/en/docs/design-automation/v3/reference/http/servicelimits-owner-GET/)
+  - [PUT servicelimits/:owner](https://forge.autodesk.com/en/docs/design-automation/v3/reference/http/servicelimits-owner-PUT/)
 - Shares
-  [GET shares](https://forge.autodesk.com/en/docs/design-automation/v3/reference/http/shares-GET/)
+  
+  - [GET shares](https://forge.autodesk.com/en/docs/design-automation/v3/reference/http/shares-GET/)
 
