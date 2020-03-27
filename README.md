@@ -7,17 +7,19 @@
 
 # Description
 
-This is a quick transition guide for Design Automation from [V2](https://forge.autodesk.com/en/docs/design-automation/v2/developers_guide/overview/) to [V3](https://forge.autodesk.com/en/docs/design-automation/v3/developers_guide/overview/).
+This migration guide maps the API changes from [V2](https://forge.autodesk.com/en/docs/design-automation/v2/developers_guide/overview/) to [V3](https://forge.autodesk.com/en/docs/design-automation/v3/developers_guide/overview/), how to migrate and what's new on `v3`.
+
+Key concepts remain the same: the `AppBundle` (formerly `AppPackage`) contains the custom code, the `Activity` determine how to run it, and finally the `Workitem` is the execution of it. `Engines` now support more products.
 
 ![](/thumbnail.png)
 
 # Sections
 
-## API Changes: :card_index:
+## API Changes :card_index:
 
 This section maps the v2 endpoints with the new v3 endpoints.
 
-- [AppBundles](apppackages.md)
+- [AppBundles](apppackages.md), formerly AppPackages
 - [Activities](activities.md)
 - [Worktems](workitems.md)
 - [Engines](engines.md)
@@ -39,6 +41,11 @@ This section lists what's new with links to the documentation.
 - Shares
   
   - [GET shares](https://forge.autodesk.com/en/docs/design-automation/v3/reference/http/shares-GET/)
+
+## Packages (v3)
+
+- [.NET](https://www.nuget.org/packages/Autodesk.Forge.DesignAutomation/) on nuget ([source](https://github.com/Autodesk-Forge/forge-api-dotnet-design.automation))
+- [Nodejs](https://www.npmjs.com/package/autodesk.forge.designautomation) on npm ([source](https://github.com/Autodesk-Forge/Autodesk.Forge.DesignAutomation))
  
 # Further Reading
 
