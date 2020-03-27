@@ -156,10 +156,10 @@ For full information and tutorial please refer [PublishActivity in V3](https://f
 | ------------------------------------------------------------ | -------------------------------------------------------- | ------------------------------------------------------------ |
 | Base Url                                                     | https://developer.api.autodesk.com/autocad.io/us-east/v2 | https://developer.api.autodesk.com/da/us-east/v3             |
 | Updates an Activity by redefining the entire Activity object. | {baseUrl}/Activities(‘:id’)                              | In V3 it does not let you reference an Activity by its `id`. You must always reference an Activity by an alias. Note that an alias points to a specific version of an Activity and not the Activity itself. Refer Example `UpdateActivity` |
-| Updates an Activity by specifying only the changed attributes. | {baseUrl}/Activities(‘:id’)                              | {baseUrl}/:id/aliases/:aliasId <br />Refer -Example :PatchActivity |
-| Removes a specific Activity.                                 | {baseUrl}/Activities(‘:id’)                              | {baseUrl}/activities/:id<br />Refer-Example: DeleteActivity  |
-|                                                              |                                                          | {baseUrl}activities/:id/aliases/:aliasId<br />Refer-Example: DeleteActivity-Alias |
-|                                                              |                                                          | {baseUrl}activities/:id/versions/:version<br />Refer-Example:DeleteActivity-Version |
+| Updates an Activity by specifying only the changed attributes. | {baseUrl}/Activities(‘:id’)                              | {baseUrl}/:id/aliases/:aliasId <br />Refer - Example PatchActivity |
+| Removes a specific Activity.                                 | {baseUrl}/Activities(‘:id’)                              | {baseUrl}/activities/:id<br />Refer- Example DeleteActivity  |
+|                                                              |                                                          | {baseUrl}activities/:id/aliases/:aliasId<br />Refer- Example DeleteActivity-Alias |
+|                                                              |                                                          | {baseUrl}activities/:id/versions/:version<br />Refer- Example DeleteActivity-Version |
 
 **Example: UpdateActivity**
 
