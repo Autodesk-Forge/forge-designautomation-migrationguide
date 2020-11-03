@@ -54,7 +54,7 @@ For example, using AutoCAD to plot a supplied DWG to a PDF file. Another example
 |                 |                                                              | 11.2.2.1 | verb -`enum:string`, The HTTP verb to be used. Possible values: `get`, `head`, `put`, `post`, `patch`, `read` |
 |                 |                                                              | 11.2.2.2 | multiparts -`object` Provide [multipart post](http://hc.apache.org/httpclient-3.x/methods/multipartpost.html) method to upload the results and multiparts can be empty if there is no “parameter” to provide. Refer [multiparts](https://forge.autodesk.com/en/docs/design-automation/v3/reference/http/activities-POST/) |
 
-#### New API in V3
+#### Create Activity API in V3
 
 Base URL: https://developer.api.autodesk.com/da/us-east/v3
 
@@ -64,7 +64,7 @@ Base URL: https://developer.api.autodesk.com/da/us-east/v3
 | **POST**  | {baseUrl}/activities/{id}/versions          | Creates a new version of the Activity |
 | **PATCH** | {baseUrl}/activities/{id}/aliases/{aliasId} | Modifies alias details.               |
 
-#### Example:
+#### Example: Create Activity:
 
 #### V2																		
 
@@ -139,7 +139,7 @@ curl -X POST \
 
 For full information and tutorial please refer [PublishActivity in V3](https://forge.autodesk.com/en/docs/design-automation/v3/tutorials/autocad/task-4-publish-activity/)
 
-### GET Activities
+### GET Activities 
 
 |                      | v2                                                        | v3                                                           |
 | -------------------- | --------------------------------------------------------- | ------------------------------------------------------------ |
@@ -161,7 +161,7 @@ For full information and tutorial please refer [PublishActivity in V3](https://f
 |                                                              |                                                          | {baseUrl}activities/:id/aliases/:aliasId<br />Refer- Example DeleteActivity-Alias |
 |                                                              |                                                          | {baseUrl}activities/:id/versions/:version<br />Refer- Example DeleteActivity-Version |
 
-**Example: UpdateActivity**
+**Example: Update Activity**
 
 [Create an alias to the Activity](https://forge.autodesk.com/en/docs/design-automation/v3/tutorials/autocad/task-4-publish-activity/#step-2-create-an-alias-to-the-activity)
 

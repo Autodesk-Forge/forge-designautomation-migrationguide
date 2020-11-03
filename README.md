@@ -7,9 +7,9 @@
 
 # Description
 
-This migration guide maps the API changes from [V2](https://forge.autodesk.com/en/docs/design-automation/v2/developers_guide/overview/) to [V3](https://forge.autodesk.com/en/docs/design-automation/v3/developers_guide/overview/), how to migrate and what's new on `v3`.
+Design Automation of Forge V2 only supports AutoCAD engine. This migration guide maps the API changes from [V2](https://forge.autodesk.com/en/docs/design-automation/v2/developers_guide/overview/) to [V3](https://forge.autodesk.com/en/docs/design-automation/v3/developers_guide/overview/), how to migrate and what's new on `v3`.
 
-Key concepts remain the same: the `AppBundle` (formerly `AppPackage`) contains the custom code, the `Activity` determine how to run it, and finally the `Workitem` is the execution of it. `Engines` now support more products.
+Key concepts remain the same: the `AppBundle` (formerly `AppPackage`) contains the custom code of plugin, the `Activity` determines how to run it, and the `Workitem` is the execution job with input and output specification. `Engines` now supports more products (AutoCAD, Inventor, Revit, 3DsMax).
 
 ![](/thumbnail.png)
 
@@ -51,7 +51,7 @@ This section lists what's new with links to the documentation.
 
 Documentation:
 
-- [Design Automation](https://forge.autodesk.com/en/docs/design-automation/v3/developers_guide/overview/) (v3)
+- [Design Automation Overview](https://forge.autodesk.com/en/docs/design-automation/v3/developers_guide/overview/) (v3)
 
 Tutorial:
 

@@ -1,6 +1,7 @@
 ## Workitems
 
- A job that is submitted to and executed by the AutoCAD core engine. A WorkItem is used to execute an Activity; the relationship between an Activity and WorkItem can be thought of as a “function definition” and “function call”, respectively.
+ A job that is submitted to and executed by the cloud engine of Forge. A WorkItem is used to execute an Activity; the relationship between an Activity and WorkItem can be thought of as a “function definition” and “function call”, respectively.
+
 
 *Note: Once a WorkItem is created, it cannot be modified.*
 
@@ -24,7 +25,7 @@ A simple description is given for each attribute in V3 body structure, for detai
 
 |                 | V2                                                           |       | V3                                                           |
 | --------------- | ------------------------------------------------------------ | ----- | ------------------------------------------------------------ |
-| URL             | https://developer.api.autodesk.com/autocad.io/us-east/v2/WorkItems |       | POSThttps://developer.api.autodesk.com/da/us-east/v3/workitems |
+| URL             | https://developer.api.autodesk.com/autocad.io/us-east/v2/WorkItems |       | POST https://developer.api.autodesk.com/da/us-east/v3/workitems |
 | Body Attributes |                                                              |       |                                                              |
 | 1               | ActivityId -`string`                                         | 1     | activityId -`string`                                         |
 | 2               | Arguments -`object`                                          | 2     | arguments -`object`                                          |
@@ -46,11 +47,13 @@ A simple description is given for each attribute in V3 body structure, for detai
 | 4               | StatusDetails - `object`                                     | 3.2.2 | signature -`string`  The signature calculated for Url.       |
 | 4.1             | Report -`string: URL`                                        | 4     | limitProcessingTimeSec - `int` Max duration of processing in seconds per workitem (includes download and upload time). |
 | 5               | Version - `int` should always be 1                           | 5     | n/a                                                          |
-| 6               | Refer- Attributes Set Automatically by Server                | 6     | Refer- Attributes Set Automatically by Server                |
+
+
+The parameters in **payload>>arguments** must be consistent to what are defined in activity. e.g. if a parameter is named _InputFile_, then in the payload when posting a Workitem, one parameter _InputFile_ must be available in the payload .
 
 #### Attributes Set Automatically
 
-​	This table is only for only theoretical difference . No Action is required for migration from v2 to v3, 
+​	This table is only for theoretical difference . No Action is required for migration from v2 to v3, 
 
 | Attributes | V2                                                           | V3                      |
 | ---------- | ------------------------------------------------------------ | ----------------------- |
