@@ -4,7 +4,7 @@ The actual processing engine that runs the WorkItem job and processes the Activi
  - AutoCAD
  - 3dsMax 
  - Inventor 
- - Revit. 
+ - Revit 
 
 Note: There may be multiple versions of each engine.
 
